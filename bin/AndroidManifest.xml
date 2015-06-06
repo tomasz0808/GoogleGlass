@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.DeviceDefault" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.projektgrupowy.MainActivity"
             android:label="@string/app_name" >            
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
