@@ -18,5 +18,10 @@
     <string name="word_count_sub_menu_3">20 – 30 wyrazów</string>
     <string name="word_count_sub_menu_4">30 – 40 wyrazów</string>
     <string name="word_count_sub_menu_5">40 – 50 wyrazów</string>
-
+        
+    <string name="sentence_1">Lorem ipsum dolor sit amet, consectetur adipiscing.</string>
+    <string name="sentence_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta mauris quis tristique faucibus. Vestibulum malesuada urna enim.</string>
+    <string name="sentence_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis auctor ex ut posuere. Phasellus blandit lorem purus, eget volutpat mauris mollis vel. Duis ac.</string>
+    <string name="sentence_4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec quam fermentum odio pretium dignissim. In quis massa nec lectus luctus rhoncus non vitae mauris. Curabitur vehicula neque eu ex aliquet scelerisque. Cras nisi magna.</string>
+    <string name="sentence_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu aliquam lacus, non vestibulum risus. Nullam interdum neque et hendrerit imperdiet. In mollis odio a ex tempor ullamcorper. Morbi ut diam ac magna egestas auctor. Phasellus eu mauris quis sem feugiat fermentum vitae eget lectus.</string>
 </resources>

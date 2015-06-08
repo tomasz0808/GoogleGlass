@@ -4,26 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.media.AudioManager;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.AdapterView;
 import android.widget.TextView;
 
 import com.example.googleglass.R;
 import com.example.googleglass.R.id;
-import com.google.android.glass.media.Sounds;
 import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollAdapter;
 import com.google.android.glass.widget.CardScrollView;
@@ -35,16 +29,16 @@ public class MainActivity extends Activity {
 	private ExampleCardScrollAdapter mAdapter;
 	private GetFonts getFonts;
 	int textSize = 14;
-	TextView titleText;
+	int wordCount = 10;
+	String textToView;
 	TextView bodyText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// android.os.Debug.waitForDebugger(); //uncomment if you want to debbug in eclipse
-
+//		android.os.Debug.waitForDebugger(); //uncomment if you want to debbug in eclipse
 		getFonts = new GetFonts(getApplicationContext());
-
+		textToView = this.getString(R.string.sentence_1);
 		createCards();
 		mCardScrollView = new CardScrollView(this);
 		mAdapter = new ExampleCardScrollAdapter();
@@ -94,23 +88,28 @@ public class MainActivity extends Activity {
 			mAdapter.notifyDataSetChanged();
 			break;
 		case R.id.wordsNumber_option_1:
-			textSize = 22;
+			textToView = getResources().getString(R.string.sentence_1);
+			wordCount = 10;
 			mAdapter.notifyDataSetChanged();
 			break;
 		case R.id.wordsNumber_option_2:
-			textSize = 22;
+			textToView = getResources().getString(R.string.sentence_2);
+			wordCount = 20;
 			mAdapter.notifyDataSetChanged();
 			break;
 		case R.id.wordsNumber_option_3:
-			textSize = 22;
+			textToView = getResources().getString(R.string.sentence_3);
+			wordCount = 30;
 			mAdapter.notifyDataSetChanged();
 			break;
 		case R.id.wordsNumber_option_4:
-			textSize = 22;
+			textToView = getResources().getString(R.string.sentence_4);
+			wordCount = 40;
 			mAdapter.notifyDataSetChanged();
 			break;
 		case R.id.wordsNumber_option_5:
-			textSize = 22;
+			textToView = getResources().getString(R.string.sentence_5);
+			wordCount = 50;
 			mAdapter.notifyDataSetChanged();
 			break;
 		default:
@@ -157,15 +156,13 @@ public class MainActivity extends Activity {
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View view = new CardBuilder(getApplicationContext(), CardBuilder.Layout.EMBED_INSIDE)
 										.setEmbeddedLayout(R.layout.activity_main)
-										.setFootnote("Footnote" + position)
 										.getView();
 			String currentHeaderText;
 			String currentFontName;
 			Typeface currentFont;
 
-			titleText = (TextView) view.findViewById(id.headTextView);
 			bodyText  = (TextView) view.findViewById(id.bodyTextView);
-
+			
 			switch (position) {
 			case 0: {
 				currentFontName = getFonts.getFontNameByID(position);
@@ -193,11 +190,14 @@ public class MainActivity extends Activity {
 				break;
 			}
 
-			currentHeaderText = "Czcionka " + currentFontName + ", rozmiar " + textSize;
-			titleText.setText(currentHeaderText);
-			titleText.setTypeface(currentFont);
-			titleText.setTextColor(Color.WHITE);
-			titleText.setTextSize(TypedValue.COMPLEX_UNIT_DIP, textSize);
+			currentHeaderText = "Czcionka " + currentFontName + ", rozmiar " + textSize + ", "+ wordCount + " wyrazów.";
+			
+			
+			bodyText.setText(currentHeaderText+"\n"+textToView);
+			bodyText.setTypeface(currentFont);
+			bodyText.setTextColor(Color.WHITE);
+			bodyText.setTextSize(TypedValue.COMPLEX_UNIT_DIP, textSize);
+			
 			return view;
 		}
 	}
