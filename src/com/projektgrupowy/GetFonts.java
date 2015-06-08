@@ -26,8 +26,7 @@ public class GetFonts {
 	}
 
 	public Typeface getFontByID(int id) {
-		Typeface fontToReturn;
-		
+		Typeface fontToReturn;	
 		switch (id) {
 		case 0:
 			fontToReturn = arialFont;
@@ -45,8 +44,7 @@ public class GetFonts {
 		default:
 			fontToReturn = arialFont;
 			break;
-		}
-		
+		}		
 		return fontToReturn;
 	}
 	
@@ -70,28 +68,8 @@ public class GetFonts {
 		default:
 			fontNameToReturn = ARIAL;
 			break;
-		}
-		
+		}	
 		return fontNameToReturn;
 	}
-	
-	
-	
-	
-//	
-//	public Typeface getArial() {
-//		return arialFont;
-//	}
-//
-//	public Typeface getCalibri() {
-//		return calibriFont;
-//	}
-//
-//	public Typeface getImpact() {
-//		return impactFont;
-//	}
-//
-//	public Typeface getTimesNewRoman() {
-//		return timesNewRomanFont;
-//	}
+
 }

@@ -2,10 +2,21 @@
 <resources>
 
     <string name="app_name">GoogleGlass</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    
-    
+   
+    <string name="option_menu_1">Rozmiar czcionki</string>
+    <string name="option_menu_2">Liczba wyrazów</string>   
     <string name="glass_startApp_trigger">Start Test</string>
+    
+    <string name="text_size_sub_menu_1">14</string>
+    <string name="text_size_sub_menu_2">16</string>
+    <string name="text_size_sub_menu_3">18</string>
+    <string name="text_size_sub_menu_4">20</string>
+    <string name="text_size_sub_menu_5">22</string>
+    
+    <string name="word_count_sub_menu_1">5 – 10 wyrazów</string>
+    <string name="word_count_sub_menu_2">10 – 20 wyrazów</string>
+    <string name="word_count_sub_menu_3">20 – 30 wyrazów</string>
+    <string name="word_count_sub_menu_4">30 – 40 wyrazów</string>
+    <string name="word_count_sub_menu_5">40 – 50 wyrazów</string>
 
 </resources>
