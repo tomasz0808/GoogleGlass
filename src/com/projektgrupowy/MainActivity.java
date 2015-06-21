@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 
 	private List<CardBuilder> mCards;
 	private CardScrollView mCardScrollView;
-	private ExampleCardScrollAdapter mAdapter;
+	private CustomCardScrollAdapter mAdapter;
 	private GetFonts getFonts;
 	int textSize = 14;
 	int wordCount = 10;
@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 		textToView = this.getString(R.string.sentence_1);
 		createCards();
 		mCardScrollView = new CardScrollView(this);
-		mAdapter = new ExampleCardScrollAdapter();
+		mAdapter = new CustomCardScrollAdapter();
 		mCardScrollView.setAdapter(mAdapter);
 		mCardScrollView.activate();
 
@@ -126,7 +126,7 @@ public class MainActivity extends Activity {
 		mCards.add(new CardBuilder(this, CardBuilder.Layout.EMBED_INSIDE).setEmbeddedLayout(R.layout.activity_main));
 	}
 
-	private class ExampleCardScrollAdapter extends CardScrollAdapter {
+	private class CustomCardScrollAdapter extends CardScrollAdapter {
 		@Override
 		public int getPosition(Object item) {
 			return mCards.indexOf(item);
