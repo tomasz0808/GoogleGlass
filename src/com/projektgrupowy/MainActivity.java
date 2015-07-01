@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.example.googleglass.R;
 import com.example.googleglass.R.id;
+import com.google.android.glass.app.Card;
 import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollAdapter;
 import com.google.android.glass.widget.CardScrollView;

@@ -50,7 +50,7 @@ public class GetFonts {
 	
 	public String getFontNameByID(int id) {
 		String fontNameToReturn;
-		
+
 		switch (id) {
 		case 0:
 			fontNameToReturn = ARIAL;
@@ -68,7 +68,7 @@ public class GetFonts {
 		default:
 			fontNameToReturn = ARIAL;
 			break;
-		}	
+		}
 		return fontNameToReturn;
 	}
 
